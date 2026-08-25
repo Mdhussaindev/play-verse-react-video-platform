@@ -4,7 +4,12 @@
 }
 
 .main-content {
-  min-height: 100vh;
-  padding: 40px;
+  min-height: calc(100vh - 76px);
   color: #ffffff;
+  padding: 30px;
+}
+
+.main-content h1 {
+  font-size: 24px;
+  font-weight: 600;
 }
