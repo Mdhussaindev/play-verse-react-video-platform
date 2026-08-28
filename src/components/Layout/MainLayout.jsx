@@ -1,5 +1,6 @@
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
+import VideoGrid from "../VideoGrid/VideoGrid";
 
 import "./MainLayout.css";
 
@@ -12,7 +13,7 @@ function MainLayout() {
         <Sidebar />
 
         <main className="main-content">
-          <h1>Welcome to PlayVerse</h1>
+          <VideoGrid />
         </main>
       </div>
     </div>

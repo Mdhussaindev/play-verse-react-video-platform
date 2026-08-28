@@ -3,46 +3,43 @@ import {
   HeartOutlined,
   HistoryOutlined,
   VideoCameraOutlined,
-  FolderOutlined,
-  UsergroupAddOutlined,
+  AppstoreOutlined,
+  TeamOutlined,
   QuestionCircleOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
 
 import "./Sidebar.css";
 
-const topMenu = [
+const menuItems = [
   {
     label: "Home",
     icon: <HomeOutlined />,
     active: true,
   },
   {
-    label: "Liked videos",
+    label: "Liked Videos",
     icon: <HeartOutlined />,
   },
   {
     label: "History",
     icon: <HistoryOutlined />,
   },
-];
-
-const middleMenu = [
   {
-    label: "My content",
+    label: "My Content",
     icon: <VideoCameraOutlined />,
   },
   {
-    label: "Collections",
-    icon: <FolderOutlined />,
+    label: "Collection",
+    icon: <AppstoreOutlined />,
   },
   {
     label: "Subscribers",
-    icon: <UsergroupAddOutlined />,
+    icon: <TeamOutlined />,
   },
 ];
 
-const bottomMenu = [
+const bottomItems = [
   {
     label: "Support",
     icon: <QuestionCircleOutlined />,
@@ -56,11 +53,16 @@ const bottomMenu = [
 function SidebarItem({ item }) {
   return (
     <button
-      className={`sidebar-item ${item.active ? "active" : ""}`}
       type="button"
+      className={`sidebar-item ${item.active ? "active" : ""}`}
     >
-      <span className="sidebar-icon">{item.icon}</span>
-      <span className="sidebar-label">{item.label}</span>
+      <span className="sidebar-icon">
+        {item.icon}
+      </span>
+
+      <span className="sidebar-label">
+        {item.label}
+      </span>
     </button>
   );
 }
@@ -68,28 +70,24 @@ function SidebarItem({ item }) {
 function Sidebar() {
   return (
     <aside className="sidebar">
-      <nav className="sidebar-navigation">
+      <div>
         <div className="sidebar-menu">
-          {topMenu.map((item) => (
-            <SidebarItem key={item.label} item={item} />
+          {menuItems.map((item) => (
+            <SidebarItem
+              key={item.label}
+              item={item}
+            />
           ))}
         </div>
-
-        <div className="sidebar-divider" />
-
-        <div className="sidebar-menu">
-          {middleMenu.map((item) => (
-            <SidebarItem key={item.label} item={item} />
-          ))}
-        </div>
-      </nav>
+      </div>
 
       <div className="sidebar-bottom">
-        <div className="sidebar-divider" />
-
         <div className="sidebar-menu">
-          {bottomMenu.map((item) => (
-            <SidebarItem key={item.label} item={item} />
+          {bottomItems.map((item) => (
+            <SidebarItem
+              key={item.label}
+              item={item}
+            />
           ))}
         </div>
       </div>
