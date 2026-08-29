@@ -11,7 +11,7 @@ import {
 
 import "./Sidebar.css";
 
-const menuItems = [
+const mainMenu = [
   {
     label: "Home",
     icon: <HomeOutlined />,
@@ -39,7 +39,7 @@ const menuItems = [
   },
 ];
 
-const bottomItems = [
+const bottomMenu = [
   {
     label: "Support",
     icon: <QuestionCircleOutlined />,
@@ -50,17 +50,19 @@ const bottomItems = [
   },
 ];
 
-function SidebarItem({ item }) {
+function SidebarButton({ item }) {
   return (
     <button
       type="button"
-      className={`sidebar-item ${item.active ? "active" : ""}`}
+      className={`sidebar-button ${
+        item.active ? "sidebar-button-active" : ""
+      }`}
     >
-      <span className="sidebar-icon">
+      <span className="sidebar-button-icon">
         {item.icon}
       </span>
 
-      <span className="sidebar-label">
+      <span className="sidebar-button-text">
         {item.label}
       </span>
     </button>
@@ -70,27 +72,23 @@ function SidebarItem({ item }) {
 function Sidebar() {
   return (
     <aside className="sidebar">
-      <div>
-        <div className="sidebar-menu">
-          {menuItems.map((item) => (
-            <SidebarItem
-              key={item.label}
-              item={item}
-            />
-          ))}
-        </div>
-      </div>
+      <nav className="sidebar-main-menu">
+        {mainMenu.map((item) => (
+          <SidebarButton
+            key={item.label}
+            item={item}
+          />
+        ))}
+      </nav>
 
-      <div className="sidebar-bottom">
-        <div className="sidebar-menu">
-          {bottomItems.map((item) => (
-            <SidebarItem
-              key={item.label}
-              item={item}
-            />
-          ))}
-        </div>
-      </div>
+      <nav className="sidebar-bottom-menu">
+        {bottomMenu.map((item) => (
+          <SidebarButton
+            key={item.label}
+            item={item}
+          />
+        ))}
+      </nav>
     </aside>
   );
 }

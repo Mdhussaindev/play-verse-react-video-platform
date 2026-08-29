@@ -1,74 +1,140 @@
 .video-card {
   width: 100%;
+  min-width: 0;
+
   background: #080808;
-  border-radius: 14px;
+
+  border-radius: 12px;
+
   overflow: hidden;
-  transition: 0.25s ease;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
 .video-card:hover {
-  transform: translateY(-4px);
-  background: #111116;
+  transform: translateY(-3px);
+
+  background: #101014;
 }
+
+/* =========================================
+   THUMBNAIL
+========================================= */
 
 .video-thumbnail-wrapper {
   width: 100%;
+
+  /*
+    YouTube style 16:9
+  */
   aspect-ratio: 16 / 9;
+
   overflow: hidden;
+
   background: #151515;
-  border-radius: 14px;
+
+  border-radius: 10px;
 }
 
 .video-thumbnail {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+
   display: block;
-  transition: 0.4s ease;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
 }
 
 .video-card:hover .video-thumbnail {
   transform: scale(1.04);
 }
 
+/* =========================================
+   VIDEO INFO
+========================================= */
+
 .video-info {
   display: flex;
-  gap: 13px;
-  padding: 15px 4px 8px;
+
+  gap: 11px;
+
+  padding: 12px 3px 4px;
 }
 
+/* =========================================
+   AVATAR
+========================================= */
+
 .video-avatar {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
+  width: 36px;
+  height: 36px;
+
+  min-width: 36px;
+
   border-radius: 50%;
+
   object-fit: cover;
+
+  border: 1px solid #303036;
 }
+
+/* =========================================
+   DETAILS
+========================================= */
 
 .video-details {
   min-width: 0;
+
+  flex: 1;
 }
 
 .video-details h3 {
-  margin: 0 0 7px;
-  color: #fff;
-  font-size: 15px;
-  line-height: 1.4;
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 14px;
   font-weight: 600;
+
+  line-height: 1.35;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  overflow: hidden;
 }
 
 .video-channel {
-  margin: 0 0 5px;
-  color: #a3a3ad;
-  font-size: 13px;
+  margin: 0 0 4px;
+
+  color: #a7a7b0;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .video-meta {
   margin: 0;
-  color: #70707a;
-  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #74747c;
+
+  font-size: 11px;
+
+  white-space: nowrap;
 }
 
 .video-meta span {
-  margin: 0 6px;
+  color: #777780;
 }

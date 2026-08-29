@@ -1,156 +1,184 @@
-.sidebar {
-  position: sticky;
-  top: 72px;
+/* =========================================
+   PLAYVERSE SIDEBAR
+========================================= */
 
-  width: 365px;
-  min-width: 365px;
+.sidebar {
+  width: 214px;
+  min-width: 214px;
   height: calc(100vh - 72px);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 26px 16px 24px;
+  padding: 18px 10px 14px;
 
-  background: #050505;
-  border-right: 1px solid #202026;
+  background: #000000;
 
-  overflow-y: auto;
+  border-right: 1px solid #202024;
+
+  overflow: hidden;
 }
 
-.sidebar-menu {
+/* =========================================
+   MENUS
+========================================= */
+
+.sidebar-main-menu,
+.sidebar-bottom-menu {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
-.sidebar-item {
+/* =========================================
+   BUTTON
+========================================= */
+
+.sidebar-button {
   position: relative;
 
   width: 100%;
-  height: 60px;
+  height: 42px;
 
   display: flex;
   align-items: center;
 
-  gap: 18px;
-  padding: 0 20px;
+  padding: 0 10px;
+
+  gap: 11px;
+
+  color: #b5b5bb;
 
   background: #050505;
-  color: #9d9da6;
 
-  border: 1px solid #29292f;
-  border-radius: 12px;
+  border: 1px solid #35353a;
+  border-radius: 3px;
 
-  cursor: pointer;
-  text-align: left;
-
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
 
-  transition: all 0.25s ease;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.sidebar-item:hover {
-  color: #ffffff;
-  background: #121218;
-  border-color: #494052;
+/* =========================================
+   ICON
+========================================= */
 
-  transform: translateX(3px);
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-.sidebar-icon {
-  width: 28px;
-  min-width: 28px;
+.sidebar-button-icon {
+  width: 20px;
+  min-width: 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 25px;
+  font-size: 17px;
 
-  color: #a6a6af;
+  color: #dedee3;
 
-  transition: all 0.25s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.sidebar-item:hover .sidebar-icon {
-  color: #a970ff;
-}
+/* =========================================
+   TEXT
+========================================= */
 
-.sidebar-label {
+.sidebar-button-text {
   white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* ACTIVE HOME */
+/* =========================================
+   HOVER
+========================================= */
 
-.sidebar-item.active {
+.sidebar-button:hover {
   color: #ffffff;
 
-  background: linear-gradient(
-    90deg,
-    rgba(160, 94, 255, 0.17),
-    rgba(160, 94, 255, 0.04)
-  );
+  background: #111114;
 
-  border-color: #4a326d;
+  border-color: #6d6d75;
 
-  box-shadow:
-    0 10px 30px rgba(139, 76, 220, 0.08);
+  transform: translateX(2px);
 }
 
-.sidebar-item.active::before {
+.sidebar-button:hover .sidebar-button-icon {
+  color: #ffffff;
+
+  transform: scale(1.05);
+}
+
+/* =========================================
+   ACTIVE HOME
+========================================= */
+
+.sidebar-button-active {
+  color: #ffffff;
+
+  background: #111111;
+
+  border-color: #85858d;
+}
+
+.sidebar-button-active::before {
   content: "";
 
   position: absolute;
-  left: -1px;
-  top: 10px;
-  bottom: 10px;
 
-  width: 4px;
+  left: -1px;
+  top: 5px;
+  bottom: 5px;
+
+  width: 3px;
 
   background: #a970ff;
 
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
 
-  box-shadow: 0 0 14px rgba(169, 112, 255, 0.7);
+  box-shadow: 0 0 10px rgba(169, 112, 255, 0.7);
 }
 
-.sidebar-item.active .sidebar-icon {
-  color: #a970ff;
+.sidebar-button-active .sidebar-button-icon {
+  color: #ffffff;
 }
 
-.sidebar-bottom {
-  padding-top: 20px;
+/* =========================================
+   BOTTOM MENU
+========================================= */
+
+.sidebar-bottom-menu {
+  padding-bottom: 2px;
 }
 
-@media (max-width: 1200px) {
-  .sidebar {
-    width: 280px;
-    min-width: 280px;
-  }
-}
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 900px) {
   .sidebar {
-    width: 88px;
-    min-width: 88px;
-    padding: 22px 10px;
-  }
-
-  .sidebar-item {
-    justify-content: center;
-    padding: 0;
-  }
-
-  .sidebar-label {
-    display: none;
+    width: 190px;
+    min-width: 190px;
   }
 }
 
-@media (max-width: 640px) {
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
   .sidebar {
     display: none;
   }
