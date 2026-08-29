@@ -4,47 +4,162 @@ import "./VideoGrid.css";
 const videos = [
   {
     id: 1,
-    title: "How to Learn React | Complete Roadmap",
+    title: "Complete React JS Roadmap for Beginners",
     channel: "Hussain Khan",
-    views: "100K Views",
-    date: "18 hours ago",
+    views: "125K Views",
+    date: "2 days ago",
     thumbnail:
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=900&q=80",
-    avatar:
-      "https://i.pravatar.cc/100?img=12",
+      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=900&q=85",
   },
+
   {
     id: 2,
-    title: "How much I made with 70M views",
-    channel: "Arman Ros",
-    views: "70K Views",
-    date: "18 hours ago",
+    title: "Build a Modern Portfolio Website with React",
+    channel: "Hussain Khan",
+    views: "98K Views",
+    date: "3 days ago",
     thumbnail:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80",
-    avatar:
-      "https://i.pravatar.cc/100?img=11",
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=900&q=85",
   },
+
   {
     id: 3,
-    title: "Deno just got 2M npm packages",
-    channel: "Arman Ros",
-    views: "100K Views",
-    date: "18 hours ago",
+    title: "JavaScript Array Methods You Must Know",
+    channel: "Hussain Khan",
+    views: "210K Views",
+    date: "5 days ago",
     thumbnail:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80",
-    avatar:
-      "https://i.pravatar.cc/100?img=13",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=85",
   },
+
   {
     id: 4,
-    title: "Best way to learn Socket IO",
-    channel: "Arman Ros",
-    views: "100K Views",
-    date: "18 hours ago",
+    title: "HTML & CSS Full Website From Scratch",
+    channel: "Hussain Khan",
+    views: "175K Views",
+    date: "1 week ago",
     thumbnail:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
-    avatar:
-      "https://i.pravatar.cc/100?img=14",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 5,
+    title: "Master CSS Flexbox in 30 Minutes",
+    channel: "Hussain Khan",
+    views: "86K Views",
+    date: "1 week ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 6,
+    title: "CSS Grid Layout Complete Tutorial",
+    channel: "Hussain Khan",
+    views: "72K Views",
+    date: "8 days ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 7,
+    title: "React Hooks Explained — useState & useEffect",
+    channel: "Hussain Khan",
+    views: "154K Views",
+    date: "10 days ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 8,
+    title: "Build Your First JavaScript Project",
+    channel: "Hussain Khan",
+    views: "63K Views",
+    date: "12 days ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 9,
+    title: "Git & GitHub Complete Guide for Developers",
+    channel: "Hussain Khan",
+    views: "119K Views",
+    date: "2 weeks ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 10,
+    title: "How to Build Responsive Websites",
+    channel: "Hussain Khan",
+    views: "91K Views",
+    date: "2 weeks ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 11,
+    title: "React Router Complete Tutorial",
+    channel: "Hussain Khan",
+    views: "104K Views",
+    date: "3 weeks ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 12,
+    title: "Frontend Developer Skills You Need in 2026",
+    channel: "Hussain Khan",
+    views: "240K Views",
+    date: "3 weeks ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 13,
+    title: "Build a Professional Dashboard UI",
+    channel: "Hussain Khan",
+    views: "78K Views",
+    date: "1 month ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 14,
+    title: "Learn APIs in JavaScript Step by Step",
+    channel: "Hussain Khan",
+    views: "132K Views",
+    date: "1 month ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 15,
+    title: "LocalStorage in JavaScript Explained",
+    channel: "Hussain Khan",
+    views: "69K Views",
+    date: "1 month ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=85",
+  },
+
+  {
+    id: 16,
+    title: "How I Build React Projects From Scratch",
+    channel: "Hussain Khan",
+    views: "188K Views",
+    date: "2 months ago",
+    thumbnail:
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=900&q=85",
   },
 ];
 
