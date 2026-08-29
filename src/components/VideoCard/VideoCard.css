@@ -2,7 +2,7 @@
   width: 100%;
   min-width: 0;
 
-  background: #080808;
+  background: transparent;
 
   border-radius: 12px;
 
@@ -14,28 +14,25 @@
 }
 
 .video-card:hover {
-  transform: translateY(-3px);
-
-  background: #101014;
+  transform: translateY(-4px);
 }
 
-/* =========================================
+/* ================================
    THUMBNAIL
-========================================= */
+================================ */
 
 .video-thumbnail-wrapper {
+  position: relative;
+
   width: 100%;
 
-  /*
-    YouTube style 16:9
-  */
   aspect-ratio: 16 / 9;
 
   overflow: hidden;
 
-  background: #151515;
+  background: #111;
 
-  border-radius: 10px;
+  border-radius: 11px;
 }
 
 .video-thumbnail {
@@ -46,28 +43,50 @@
 
   object-fit: cover;
 
-  transition: transform 0.4s ease;
+  transition: transform 0.45s ease;
 }
 
 .video-card:hover .video-thumbnail {
-  transform: scale(1.04);
+  transform: scale(1.045);
 }
 
-/* =========================================
-   VIDEO INFO
-========================================= */
+/* ================================
+   VIDEO DURATION
+================================ */
+
+.video-duration {
+  position: absolute;
+
+  right: 8px;
+  bottom: 8px;
+
+  padding: 3px 6px;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  color: #fff;
+
+  border-radius: 4px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ================================
+   VIDEO INFORMATION
+================================ */
 
 .video-info {
   display: flex;
 
   gap: 11px;
 
-  padding: 12px 3px 4px;
+  padding: 12px 2px 0;
 }
 
-/* =========================================
-   AVATAR
-========================================= */
+/* ================================
+   PROFILE
+================================ */
 
 .video-avatar {
   width: 36px;
@@ -82,9 +101,9 @@
   border: 1px solid #303036;
 }
 
-/* =========================================
+/* ================================
    DETAILS
-========================================= */
+================================ */
 
 .video-details {
   min-width: 0;
@@ -100,9 +119,10 @@
   font-size: 14px;
   font-weight: 600;
 
-  line-height: 1.35;
+  line-height: 1.4;
 
   display: -webkit-box;
+
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 
@@ -112,13 +132,9 @@
 .video-channel {
   margin: 0 0 4px;
 
-  color: #a7a7b0;
+  color: #9c9ca5;
 
   font-size: 12px;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .video-meta {
@@ -126,15 +142,14 @@
 
   display: flex;
   align-items: center;
+
   gap: 6px;
 
-  color: #74747c;
+  color: #707079;
 
   font-size: 11px;
-
-  white-space: nowrap;
 }
 
 .video-meta span {
-  color: #777780;
+  color: #65656d;
 }
