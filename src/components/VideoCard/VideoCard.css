@@ -1,3 +1,7 @@
+/* ========================================
+   VIDEO CARD
+======================================== */
+
 .video-card {
   width: 100%;
   min-width: 0;
@@ -6,20 +10,19 @@
 
   border-radius: 12px;
 
-  overflow: hidden;
+  overflow: visible;
 
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .video-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
-/* ================================
+
+/* ========================================
    THUMBNAIL
-================================ */
+======================================== */
 
 .video-thumbnail-wrapper {
   position: relative;
@@ -32,8 +35,13 @@
 
   background: #111;
 
-  border-radius: 11px;
+  border-radius: 10px;
 }
+
+
+/* ========================================
+   THUMBNAIL IMAGE
+======================================== */
 
 .video-thumbnail {
   width: 100%;
@@ -43,16 +51,20 @@
 
   object-fit: cover;
 
-  transition: transform 0.45s ease;
+  transition: transform 0.35s ease;
 }
 
+
+/* Slight zoom on hover */
 .video-card:hover .video-thumbnail {
-  transform: scale(1.045);
+  transform: scale(1.04);
 }
 
-/* ================================
+
+/* ========================================
    VIDEO DURATION
-================================ */
+   Bottom Right of Thumbnail
+======================================== */
 
 .video-duration {
   position: absolute;
@@ -60,33 +72,55 @@
   right: 8px;
   bottom: 8px;
 
-  padding: 3px 6px;
+  z-index: 5;
 
-  background: rgba(0, 0, 0, 0.85);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  color: #fff;
+  min-width: 38px;
+  height: 22px;
+
+  padding: 0 6px;
+
+  background: rgba(0, 0, 0, 0.90);
+
+  color: #ffffff;
 
   border-radius: 4px;
 
   font-size: 11px;
   font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.2px;
+
+  /* IMPORTANT:
+     Never hide duration on hover */
+  opacity: 1;
+  visibility: visible;
 }
 
-/* ================================
-   VIDEO INFORMATION
-================================ */
+
+/* ========================================
+   VIDEO INFO
+======================================== */
 
 .video-info {
   display: flex;
+
+  align-items: flex-start;
 
   gap: 11px;
 
   padding: 12px 2px 0;
 }
 
-/* ================================
-   PROFILE
-================================ */
+
+/* ========================================
+   PROFILE AVATAR
+======================================== */
 
 .video-avatar {
   width: 36px;
@@ -99,17 +133,25 @@
   object-fit: cover;
 
   border: 1px solid #303036;
+
+  display: block;
 }
 
-/* ================================
-   DETAILS
-================================ */
+
+/* ========================================
+   VIDEO DETAILS
+======================================== */
 
 .video-details {
-  min-width: 0;
-
   flex: 1;
+
+  min-width: 0;
 }
+
+
+/* ========================================
+   TITLE
+======================================== */
 
 .video-details h3 {
   margin: 0 0 5px;
@@ -117,6 +159,7 @@
   color: #ffffff;
 
   font-size: 14px;
+
   font-weight: 600;
 
   line-height: 1.4;
@@ -124,51 +167,55 @@
   display: -webkit-box;
 
   -webkit-box-orient: vertical;
+
   -webkit-line-clamp: 2;
 
   overflow: hidden;
 }
 
+
+/* ========================================
+   CHANNEL NAME
+======================================== */
+
 .video-channel {
   margin: 0 0 4px;
 
-  color: #9c9ca5;
+  color: #9999a3;
 
   font-size: 12px;
+
+  font-weight: 400;
 }
+
+
+/* ========================================
+   VIEWS + TIME
+======================================== */
 
 .video-meta {
   margin: 0;
 
   display: flex;
+
   align-items: center;
+
+  flex-wrap: wrap;
 
   gap: 6px;
 
-  color: #707079;
+  color: #85858e;
 
   font-size: 11px;
+
+  line-height: 1.4;
 }
 
-.video-meta span {
-  color: #65656d;
-}
 
-.video-duration {
-  position: absolute;
+/* Dot between views and time */
 
-  right: 8px;
-  bottom: 8px;
+.meta-dot {
+  color: #6c6c74;
 
-  padding: 4px 6px;
-
-  background: rgba(0, 0, 0, 0.9);
-  color: #ffffff;
-
-  border-radius: 4px;
-
-  font-size: 11px;
-  font-weight: 600;
-
-  line-height: 1;
+  font-size: 10px;
 }
