@@ -23,7 +23,7 @@ function Watch() {
   }
 
   return (
-    <div className="watch-page">
+    <main className="watch-page">
 
       <button
         className="watch-back"
@@ -32,14 +32,12 @@ function Watch() {
         ← Back
       </button>
 
-      <div className="watch-player">
-
+      <section className="watch-player">
         <video
           className="watch-video"
           controls
-          autoPlay
-          poster={video.thumbnail}
           preload="metadata"
+          poster={video.thumbnail}
         >
           <source
             src={video.videoUrl}
@@ -48,10 +46,9 @@ function Watch() {
 
           Your browser does not support video playback.
         </video>
+      </section>
 
-      </div>
-
-      <div className="watch-info">
+      <section className="watch-info">
 
         <h1>{video.title}</h1>
 
@@ -76,9 +73,9 @@ function Watch() {
           {video.description}
         </div>
 
-      </div>
+      </section>
 
-    </div>
+    </main>
   );
 }
 

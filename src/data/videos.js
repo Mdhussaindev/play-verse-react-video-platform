@@ -12,7 +12,6 @@ export const videos = [
     description:
       "Learn React JS fundamentals, components, props, state and modern frontend development.",
   },
-
   {
     id: 2,
     title: "HTML5 Complete Course for Beginners",
@@ -26,7 +25,6 @@ export const videos = [
     description:
       "Master HTML5 structure, semantic elements, forms, tables and modern website fundamentals.",
   },
-
   {
     id: 3,
     title: "CSS Flexbox & Modern Layouts",
@@ -40,7 +38,6 @@ export const videos = [
     description:
       "Learn CSS Flexbox, layouts, spacing and professional responsive UI techniques.",
   },
-
   {
     id: 4,
     title: "JavaScript Complete Beginner Guide",
@@ -54,7 +51,6 @@ export const videos = [
     description:
       "Learn JavaScript variables, functions, arrays, objects, loops and modern syntax.",
   },
-
   {
     id: 5,
     title: "TypeScript for React Developers",
@@ -68,7 +64,6 @@ export const videos = [
     description:
       "Understand TypeScript types, interfaces and practical TypeScript development.",
   },
-
   {
     id: 6,
     title: "Node.js Complete Backend Tutorial",
@@ -82,7 +77,6 @@ export const videos = [
     description:
       "Learn Node.js fundamentals and build modern backend applications.",
   },
-
   {
     id: 7,
     title: "Express.js REST API Tutorial",
@@ -96,7 +90,6 @@ export const videos = [
     description:
       "Build REST APIs using Express.js and understand backend routing.",
   },
-
   {
     id: 8,
     title: "MongoDB Database for Developers",
@@ -110,7 +103,6 @@ export const videos = [
     description:
       "Learn MongoDB collections, documents and database fundamentals.",
   },
-
   {
     id: 9,
     title: "Git Complete Guide for Developers",
@@ -124,7 +116,6 @@ export const videos = [
     description:
       "Learn Git repositories, commits, branches and professional workflows.",
   },
-
   {
     id: 10,
     title: "GitHub Professional Workflow",
@@ -138,7 +129,6 @@ export const videos = [
     description:
       "Learn GitHub repositories, collaboration, pull requests and project management.",
   },
-
   {
     id: 11,
     title: "Responsive Web Design Masterclass",
@@ -152,7 +142,6 @@ export const videos = [
     description:
       "Create responsive websites that work beautifully across desktop, tablet and mobile.",
   },
-
   {
     id: 12,
     title: "Frontend Development Complete Roadmap",
@@ -166,7 +155,6 @@ export const videos = [
     description:
       "Follow the complete frontend development roadmap from HTML and CSS to React.",
   },
-
   {
     id: 13,
     title: "Backend Development Roadmap",
@@ -180,7 +168,6 @@ export const videos = [
     description:
       "Understand backend technologies, APIs, databases and server-side development.",
   },
-
   {
     id: 14,
     title: "REST API Explained for Beginners",
@@ -194,7 +181,6 @@ export const videos = [
     description:
       "Understand REST APIs, HTTP methods, requests, responses and API architecture.",
   },
-
   {
     id: 15,
     title: "React Router Complete Tutorial",
@@ -208,7 +194,6 @@ export const videos = [
     description:
       "Learn React Router, navigation, dynamic routes and multi-page application structure.",
   },
-
   {
     id: 16,
     title: "Build a Professional Developer Portfolio",

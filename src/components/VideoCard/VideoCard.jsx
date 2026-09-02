@@ -77,7 +77,12 @@ function VideoCard({ video }) {
       className="video-card"
       onClick={handleVideoClick}
       role="button"
-      tabIndex="0"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === "Enter") {
+          handleVideoClick();
+        }
+      }}
     >
       <div className="video-thumbnail-wrapper">
         <img
@@ -86,7 +91,9 @@ function VideoCard({ video }) {
           className="video-thumbnail"
         />
 
-        <span className="video-duration">{video.duration}</span>
+        <span className="video-duration">
+          {video.duration}
+        </span>
       </div>
 
       <div className="video-info">
@@ -105,9 +112,7 @@ function VideoCard({ video }) {
 
           <p className="video-meta">
             <span>{video.views}</span>
-
             <span className="meta-dot">•</span>
-
             <span>{video.date}</span>
           </p>
         </div>
